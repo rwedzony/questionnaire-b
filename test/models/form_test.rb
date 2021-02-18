@@ -4,7 +4,7 @@ class FormTest < ActiveSupport::TestCase
   
   def setup 
     @form = Form.new(first_name: "SampleName",birth_date: "18.05.1990", 
-                    something_about:"sampledescription")
+                    os: "Windows", something_about:"sampledescription")
   end
 
    #First_name attribute test cases
@@ -72,14 +72,45 @@ class FormTest < ActiveSupport::TestCase
 
 
   #something_about attribute test cases
-   test "Something_about attribute should be top 140 characters long" do
+   test "form's Something_about attribute should be top 140 characters long" do
      @form.something_about="a"*140
      assert @form.valid?
    end
 
-   test "Something_about attribute must not be longer than 140 characters long" do
+   test "form's Something_about attribute must not be longer than 140 characters long" do
      @form.something_about="a"*141
      assert_not @form.valid?
    end
+
+   #os attribute test cases
+   test "form's os attribute can by blank" do
+     @form.os=nil
+     assert @form.valid?
+   end
+
+   test "form's os attribute can by empty" do
+     @form.os=""
+     assert @form.valid?
+   end
+
+    test "form's os attribute should be valid for 'Windows' value" do
+     @form.os="Windows"
+     assert @form.valid?
+    end
+
+    test "form's os attribute should be valid for 'Linux' value" do
+     @form.os="Linux"
+     assert @form.valid?
+    end
+
+    test "form's os attribute should be valid for 'MacOS' value" do
+     @form.os="MacOS"
+     assert @form.valid?
+    end
+
+    test "form's os attribute raises argument error for any other value" do
+     assert_raises(ArgumentError) {@form.os="sdfdsfsdfsdf"}
+    end
+
 
 end
