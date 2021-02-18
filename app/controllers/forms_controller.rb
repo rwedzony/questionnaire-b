@@ -46,6 +46,6 @@ class FormsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def form_params
-      params.require(:form).permit(:first_name, :birth_date, :something_about)
+      params.require(:form).permit(:first_name, :birth_date,:os,:something_about)
     end
 end

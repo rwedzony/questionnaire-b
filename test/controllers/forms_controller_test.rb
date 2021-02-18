@@ -12,7 +12,7 @@ class FormsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create form" do
     assert_difference('Form.count') do
-      post forms_url, params: { form: { birth_date: @form.birth_date, first_name: @form.first_name, something_about: @form.something_about } }, as: :json
+      post forms_url, params: { form: { birth_date: @form.birth_date, first_name: @form.first_name,  something_about: @form.something_about } }, as: :json
     end
 
     assert_response 201
