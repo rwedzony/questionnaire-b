@@ -5,12 +5,12 @@ class FormsController < ApplicationController
   def index
     @forms = Form.all
 
-    render json: @forms
+    render json: @forms, only: [:id, :first_name, :birth_date, :os, :something_about]
   end
 
   # GET /forms/1
   def show
-    render json: @form
+    render json: @form, only: [:id, :first_name, :birth_date, :os, :something_about]
   end
 
   # POST /forms
