@@ -1,24 +1,17 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is simple Backend Api for the Questionnaire App purpose.
 
-Things you may want to cover:
+* Ruby version: 3.0.0
 
-* Ruby version
+* Rails version: 6.0.3
 
-* System dependencies
+* Hosting: Heroku, url of the resource: https://questionnaire-back.herokuapp.com/forms
 
-* Configuration
+* Database: Postgresql
 
-* Database creation
+* Database initialization via rails migration
 
-* Database initialization
+* Unit tests for model validation
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
