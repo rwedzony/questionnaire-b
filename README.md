@@ -1,6 +1,6 @@
 # README
 
-This is simple Backend Api for the Questionnaire App purpose.
+This is simple Backend Api for the Questionnaire App- simple app to do custom online questionnaries.
 
 * Ruby version: 3.0.0
 
