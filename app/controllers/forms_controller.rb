@@ -1,19 +1,16 @@
 class FormsController < ApplicationController
   before_action :set_form, only: [:show, :update, :destroy]
 
-  # GET /forms
   def index
     @forms = Form.all
 
     render json: @forms, only: [:id, :first_name, :birth_date, :os, :something_about]
   end
 
-  # GET /forms/1
   def show
     render json: @form, only: [:id, :first_name, :birth_date, :os, :something_about]
   end
 
-  # POST /forms
   def create
     @form = Form.new(form_params)
 
@@ -24,7 +21,6 @@ class FormsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /forms/1
   def update
     if @form.update(form_params)
       render json: @form
@@ -33,19 +29,19 @@ class FormsController < ApplicationController
     end
   end
 
-  # DELETE /forms/1
   def destroy
     @form.destroy
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_form
-      @form = Form.find(params[:id])
-    end
 
-    # Only allow a trusted parameter "white list" through.
-    def form_params
-      params.require(:form).permit(:first_name, :birth_date,:os,:something_about)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_form
+    @form = Form.find(params[:id])
+  end
+
+  # Only allow a trusted parameter "white list" through.
+  def form_params
+    params.require(:form).permit(:first_name, :birth_date, :os, :something_about)
+  end
 end
