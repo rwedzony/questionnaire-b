@@ -16,7 +16,7 @@ This is simple Backend Api for the Questionnaire App- simple app to do custom on
 
 ## TODO
 
-1. Add Questionnire CRUD endpoints
+1. Add Questionnaire CRUD endpoints
 
 
 
