@@ -17,7 +17,8 @@ This is simple Backend Api for the Questionnaire App- simple app to do custom on
 ## TODO
 
 1. Add Questionnaire CRUD endpoints
-2. Add tests
-3. Add Auth 
+2. Add unit tests
+3. Add Authorizarion
+4. Add Rubocup code analyzer
 
 
