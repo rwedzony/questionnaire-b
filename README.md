@@ -20,5 +20,6 @@ This is simple Backend Api for the Questionnaire App- simple app to do custom on
 2. Add unit tests
 3. Add Authorizarion
 4. Add Rubocup code analyzer
+5. Change app name to survey 
 
 
